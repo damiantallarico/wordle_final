@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+        <title>Wordle - Final</title>
+    </head>
+    <body>
+        <!-- Sección para el título -->
+        <header>
+            <h1>
+                WORDLE
+            </h1>
+        </header>
+
+        <!-- Sección para el tablero -->
+        <section class="palabras" id="palabras">
+
+            <!-- Primer renglón -->
+            <div class="renglon_palabras" id="renglon_palabras">
+                <div class="letra"  id="r0c0"></div>
+                <div class="letra"  id="r0c1"></div>
+                <div class="letra"  id="r0c2"></div>
+                <div class="letra"  id="r0c3"></div>
+                <div class="letra"  id="r0c4"></div>
+            </div>
+
+            <!-- Segundo renglón -->
+            <div class="renglon_palabras" id="renglon_palabras">
+                <div class="letra"  id="r1c0"></div>
+                <div class="letra"  id="r1c1"></div>
+                <div class="letra"  id="r1c2"></div>
+                <div class="letra"  id="r1c3"></div>
+                <div class="letra"  id="r1c4"></div>
+            </div>
+
+            <!-- Tercer renglón -->
+            <div class="renglon_palabras" id="renglon_palabras">
+                <div class="letra"  id="r2c0"></div>
+                <div class="letra"  id="r2c1"></div>
+                <div class="letra"  id="r2c2"></div>
+                <div class="letra"  id="r2c3"></div>
+                <div class="letra"  id="r2c4"></div>
+            </div>
+
+            <!-- Cuarto renglón -->
+            <div class="renglon_palabras" id="renglon_palabras">
+                <div class="letra"  id="r3c0"></div>
+                <div class="letra"  id="r3c1"></div>
+                <div class="letra"  id="r3c2"></div>
+                <div class="letra"  id="r3c3"></div>
+                <div class="letra"  id="r3c4"></div>
+            </div>
+
+            <!-- Quinto renglón -->
+            <div class="renglon_palabras" id="renglon_palabras">
+                <div class="letra"  id="r4c0"></div>
+                <div class="letra"  id="r4c1"></div>
+                <div class="letra"  id="r4c2"></div>
+                <div class="letra"  id="r4c3"></div>
+                <div class="letra"  id="r4c4"></div>
+            </div>
+            
+            <!-- Sexto renglón -->
+            <div class="renglon_palabras" id="renglon_palabras">
+                <div class="letra"  id="r5c0"></div>
+                <div class="letra"  id="r5c1"></div>
+                <div class="letra"  id="r5c2"></div>
+                <div class="letra"  id="r5c3"></div>
+                <div class="letra"  id="r5c4"></div>
+            </div>
+        </section>
+
+        <!-- Sección para el teclado -->
+        <section class="teclado_qwerty" id="teclado_qwerty">
+
+            <!-- Primer renglón -->
+            <div class="reglon_teclado" id="reglon_teclado">
+                <button data-key="Q">Q</button>
+                <button data-key="W">W</button>
+                <button data-key="E">E</button>
+                <button data-key="R">R</button>
+                <button data-key="T">T</button>
+                <button data-key="Y">Y</button>
+                <button data-key="U">U</button>
+                <button data-key="I">I</button>
+                <button data-key="O">O</button>
+                <button data-key="P">P</button>
+            </div>
+
+            <!-- Segundo renglón -->
+            <div class="reglon_teclado" id="reglon_teclado">
+                <button data-key="A">A</button>
+                <button data-key="S">S</button>
+                <button data-key="D">D</button>
+                <button data-key="F">F</button>
+                <button data-key="G">G</button>
+                <button data-key="H">H</button>
+                <button data-key="J">J</button>
+                <button data-key="K">K</button>
+                <button data-key="L">L</button>
+                <button data-key="Ñ">Ñ</button>
+            </div>
+
+            <!-- Tercer renglón -->
+            <div class="reglon_teclado" id="reglon_teclado">
+                <button class="boton_ancho" data-key="Enviar">Enviar</button>
+                <button data-key="Z">Z</button>
+                <button data-key="X">X</button>
+                <button data-key="C">C</button>
+                <button data-key="V">V</button>
+                <button data-key="B">B</button>
+                <button data-key="N">N</button>
+                <button data-key="M">M</button>
+                <button class="boton_ancho" data-key="Borrar">Borrar</button>
+            </div>
+
+            <!-- Cuarto renglón -->
+            <div class="reglon_teclado" id="reglon_teclado">
+                <button class="boton_ancho" data-key="Jugar">Jugar</button>
+                <div class="reloj" id="Horas">00</div>
+                <div class="reloj" id="Minutos">:00</div>
+                <div class="reloj" id="Segundos">:00</div>
+                <div class="reloj" id="Centesimas">:00</div>
+                <button class="boton_guardar" data-key="Guardar">Guardar</button>
+                <button class="boton_cargar" data-key="Cargar">Cargar</button>
+                <button class="boton_contacto" data-key="Contacto">Contacto</button>
+            </div>
+        </section>
+
+        <!-- Sección para el modal ganador-->
+        <section id="modal_ganador" class="modal">
+            <div class="modal_contenido">
+                <p>Felicitaciones! Has adivinado la palabra!</p>
+            </div>
+        </section> 
+        
+        <!-- Sección para el modal perdedor-->
+        <section id="modal_perdedor" class="modal">
+            <div class="modal_contenido">
+                <p>Mejor suerte para la próxima vez!</p>
+            </div>
+        </section>
+
+        <!-- Sección para el pie -->
+        <footer>
+            <h2>Final - LPPA - Damián Tallarico</h2>
+        </footer>
+    </body>
+    </html>
