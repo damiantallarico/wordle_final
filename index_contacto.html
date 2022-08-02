@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles_contacto.css">
+        <script src="script_contacto.js"></script>
+        <title>Formulario de Contacto</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Formulario de Contacto
+            </h1>
+        </header>
+        <form id="formulario">
+            <fieldset>
+                <legend>Datos Personales:</legend>
+                <section>
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input class="input_fill_in" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+                        <label>
+                            <p id="error_nombre" class="esconder_error">El nombre debe contener entre 3 y 15 caracteres no numéricos.</p>
+                            <p id="vacio_nombre" class="esconder_error">El nombre no puede estar vacío ya que es un campo obligatorio.</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido:</label>
+                        <input class="input_fill_in" type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+                        <label>
+                            <p id="error_apellido" class="esconder_error">El apellido debe contener entre 3 y 15 caracteres no numéricos.</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input class="input_fill_in" name="mail" id="mail" placeholder="Ingrese su E-mail">
+                        <label>
+                            <p id="error_mail" class="esconder_error">El mail debe contener: "username@domain.com".</p>                        
+                        </label>
+                    </div>
+                    <div>
+                        <label for="comentario">Comentario:</label>
+                        <textarea class="input_textarea" type="text" id="comentario" name="comentario" placeholder="Ingrese su comentario"></textarea>
+                        <label>
+                            <p id="error_comentario" class="esconder_error">El comentario debe contener entre 3 y 15 caracteres.</p>                        
+                        </label>
+                    </div>
+                    <div class="space_buttons">
+                        <input class="button" type="submit" value="Enviar">
+                        <input class="button" type="reset" value="Limpiar">
+                    </div>
+                </section>                        
+            </fieldset>
+        </form>           
+        <footer>
+            <h2>Final - LPPA - Damián Tallarico</h2>
+        </footer>
+    </body>
+    </html>
