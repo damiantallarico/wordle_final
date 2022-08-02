@@ -1,5 +1,4 @@
 window.onload = function() {
-    
     // Validar el Submit
     document.getElementById("formulario").addEventListener('submit', validar);
 
