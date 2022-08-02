@@ -1,5 +1,4 @@
 window.onload = function() {
-
     // Variables
     var fila = 1;
     var letra = 1;
